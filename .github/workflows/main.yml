@@ -28,7 +28,6 @@ jobs:
       - name: login to GitHub Package Registry  # Connexion à GitHub Container Registry
         uses: docker/login-action@v3  # Utilise l'action de login Docker
         with:  # Avec ces paramètres
-          registry: ghcr.io  # URL du registre
           username: ${{ vars.DOCKERHUB_USERNAME }}  # Nom d'utilisateur de dockerhub
           password: ${{ secrets.DOCKERHUB_TOKEN }} # `DOCKERHUB_TOKEN` pour l'authentification.
 
